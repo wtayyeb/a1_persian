@@ -526,7 +526,7 @@ function maintain_events(){
     convert_dates();
 }
 
-$j(document).ready(function(){
+$(document).ready(function(){
     startup_events();
     setTimeout('maintain_events()', 7000);
 
