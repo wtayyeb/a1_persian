@@ -917,3 +917,128 @@ a.buy-button.blue {
 	font-family: inherit;
 	font-size: inherit;
 }
+
+
+/* persian part*/
+
+/* Message Board */
+.MessageBoard {
+	direction: rtl;
+	text-align: center;
+
+	background-color: white;
+	color: black;
+	border: 3px solid black;
+
+	font-family: "B Nazanin";
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.Tasliat {
+	background-color: black;
+	color: red;
+	border: 3px solid red;
+}
+
+.Tabrik {
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	border: 3px solid black;
+}
+
+
+
+/* Text */
+
+.editable {
+	direction: rtl;
+}
+
+.contextual {
+	float: left;
+}
+
+#content h2 {
+	direction: rtl;
+}
+
+/* Farsi L10N */
+tr.issue td.subject {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+table.list.issues {
+	direction: rtl !important;
+}
+
+.en{
+	direction: ltr;
+}
+
+.fa{
+	direction: rtl;
+}
+
+/*textarea#content_text.wiki-edit{
+	direction: ltr;
+}*/
+
+.status, .priority, .assigned-to, .fixed-version, .category {
+	font-family: "B Nazanin";
+	font-size: 14px;
+}
+
+.wiki {
+	direction: rtl;
+	font-family: 'B Nazanin';
+	font-size: 14px;
+}
+
+#main-menu ul li a.wiki {
+	font-family: Tahoma;
+	font-size: 12px;
+}
+
+.news p .author {
+	font-size:10px;
+}
+
+.news p .summary {
+	font-size:12px;
+}
+
+.news p {
+	font-size: 14px;
+	direction:rtl;
+}
+
+body {
+	font-family: Tahoma,sans-serif;
+}
+
+.timelog_custom {
+	width: 7%;
+	white-space: pre-line;
+}
+
+.syntaxhighlighter {
+	direction: ltr;
+}
+input#issue_subject{
+	direction: rtl;
+	text-align: left;
+	
+}
+textarea#issue_description, textarea#notes{
+	direction: rtl;
+}
+
+
+tr.issue.idnt td.subject a {
+    background: url("../../../images/bullet_arrow_left.png") no-repeat scroll right center transparent;
+    padding-right: 16px;
+    padding-left: 0;
+}
