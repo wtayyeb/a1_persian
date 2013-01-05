@@ -361,9 +361,9 @@ function try_miladi_to_shamsi(s){
 
 function convert_dates(){
     //Widen Search Areas
-    $j('.start-date,.due-date,.due_date,#activity>h3').each(function(){
-        $j(this).html(try_miladi_to_shamsi($j(this).html()));
-//         $j(this).css("font-size", "15px");
+    $('.start-date,.due-date,.due_date,#activity>h3').each(function(){
+        $(this).html(try_miladi_to_shamsi($(this).html()));
+//         $(this).css("font-size", "15px");
     });
 }
 
@@ -406,13 +406,13 @@ function try_smart_date_convert(s){
 
 
 function enable_smart_date_fields(){
-    target = $j('#issue_start_date,#issue_due_date');
+    target = $('#issue_start_date,#issue_due_date');
     target.css('background-color', '#D0DDFF');
     target.attr('title', 'NEW: type something like +2, -3, +1m, -2y or 90/3/29 and press Control to convert date!');
     target.keydown(function(event) {
       if (event.keyCode == '17') {
         event.preventDefault();
-        $j(this).attr("value", try_smart_date_convert($j(this).attr("value")));
+        $(this).attr("value", try_smart_date_convert($(this).attr("value")));
       }
     });
 
@@ -420,7 +420,7 @@ function enable_smart_date_fields(){
 
 
 function force_notes(){
-    $j('#issue-form').submit(function(){
+    $('#issue-form').submit(function(){
         var must_have = [
                         ['#notes', 'لطفا توضیح مناسبی را در مورد این به روز رسانی وارد نمایید.'],
 //                        ['#time_entry_comments', 'Enter time comment!'],
@@ -431,28 +431,28 @@ function force_notes(){
         ];
         
         for (i=0; i<must_have.length; i++)
-            if ($j(must_have[i][0]).val() == "") {
+            if ($(must_have[i][0]).val() == "") {
                 alert(must_have[i][1]);
                 return false;
             }
   
-  		if ($j('#time_entry_hours').val()!="" && $j('#time_entry_comments').val()=="") {
+  		if ($('#time_entry_hours').val()!="" && $('#time_entry_comments').val()=="") {
   			alert('Enter time comment!');
   			return false;
 		}
 
-/*        if ($j('#time_entry_hours').val()!="" && $j('#time_entry_custom_field_values_6').val()=="") {
+/*        if ($('#time_entry_hours').val()!="" && $('#time_entry_custom_field_values_6').val()=="") {
             alert("لطفا شرح کار انجام شده را وارد نمایید.");
             return false;
         }
   */      
-        if ($j('#issue_done_ratio').val()!="0" && $j('#issue_status_id').val()=="1") {
+        if ($('#issue_done_ratio').val()!="0" && $('#issue_status_id').val()=="1") {
             alert("لطفا وضعیت را به در حال اجرا تغییر دهید.");
             return false;
         }
 
-        var is_100 = $j('#issue_done_ratio').val() == "100";
-        var is_fin = $j('#issue_status_id' ).val() == "5";
+        var is_100 = $('#issue_done_ratio').val() == "100";
+        var is_fin = $('#issue_status_id' ).val() == "5";
         if ((is_100 && !is_fin) || (!is_100 && is_fin)) {
             alert("کارهای با وضعیت انجام شده باید پیشرفت ۱۰۰ درصدی داشته باشند.");
             return false;
@@ -464,17 +464,17 @@ function force_notes(){
         var month = ensure2(currentDate.getMonth()+1);
         var year = ensure2(currentDate.getFullYear());
         var today = year + '-' + month + '-' + day;
-        var done = $j('td.progress p.pourcent').html();
+        var done = $('td.progress p.pourcent').html();
         done = parseInt(done.substr(0, done.length - 1), 10);
-        if ((parseInt($j('#issue_done_ratio').val()) > done) && ($j('#issue_due_date').val() < today) && ($j('#issue_status_id').val()!="5") && ($j('#issue_status_id').val()!="6" )) {
+        if ((parseInt($('#issue_done_ratio').val()) > done) && ($('#issue_due_date').val() < today) && ($('#issue_status_id').val()!="5") && ($('#issue_status_id').val()!="6" )) {
             alert("مهلت انجام این کار به پایان رسیده است؛ لطفا آن را به روز نمایید.");
             return false;
         }
     });
 
-    $j('form.tabular').submit(function(){
-    	if ($j('#time_entry_comments').length > 0) {
-    		if ($j('#time_entry_comments').val() == ''){
+    $('form.tabular').submit(function(){
+    	if ($('#time_entry_comments').length > 0) {
+    		if ($('#time_entry_comments').val() == ''){
 				alert('لطفا توضیح فعالیت انجام شده را وارد نمایید.');
 				return false;
 			}
@@ -483,8 +483,8 @@ function force_notes(){
 }
 
 function translate_author() {
-    $j('.author, .journal h4, .spent-time').each(function() {
-        var s = $j(this).html();
+    $('.author, .journal h4, .spent-time').each(function() {
+        var s = $(this).html();
         replaces = [
                     ['minutes', 'دقیقه'],
                     ['minute', 'دقیقه'],
@@ -503,10 +503,10 @@ function translate_author() {
                     ];
         for (i=0; i<replaces.length; i++)
             s = s.replace(new RegExp(replaces[i][0], 'g'), replaces[i][1]);
-        $j(this).html(s);
+        $(this).html(s);
     });
     
-    $j('.author, .journal h4').attr('style', 'direction: rtl; text-align: center; font-family: "B Nazanin"; font-size: 14px;');
+    $('.author, .journal h4').attr('style', 'direction: rtl; text-align: center; font-family: "B Nazanin"; font-size: 14px;');
 }
 
 
