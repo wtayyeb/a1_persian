@@ -1,0 +1,7 @@
+@import url(../../../stylesheets/rtl.css);
+
+div#content {
+	margin-right:auto;
+    margin-left: 300px;
+    width: auto;
+}
