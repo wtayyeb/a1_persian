@@ -52,6 +52,31 @@ img.gravatar {
     padding:1px;
 }
 
+.tabular label {
+	width:90px;
+	
+}
+
+input#issue_subject {
+    width: 77%;
+}
+
+input#time_entry_comments {
+    width: 80%;
+}
+
+#attachments_fields input.description {
+    margin-right: 8px;
+}
+
+p.other-formats {
+    text-align: left;
+}
+
+.jstEditor textarea, .jstEditor iframe {
+    font-family: "Sakkal Majalla", "B Nazanin";
+    font-size: 18px;
+}
 /* Message Board */
 .MessageBoard {
 	direction: rtl;
