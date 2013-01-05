@@ -314,7 +314,7 @@ table.list thead th {
 #quick-search {	margin-top: 8px;}
 
 /* Grid styles by priorities */
-table.list td {padding: 5px;}
+table.list td {padding: 2px;}
 table.list input[type="checkbox"] {margin-top: 6px;}
 
 table.list tbody tr:hover {background-color: #EFF5F8;}

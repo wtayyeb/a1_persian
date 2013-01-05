@@ -2,6 +2,7 @@
 
 #header > h1 {
 	background: url(../images/logo.png) no-repeat right 20%;
+	font-size:24px;
 }
 
 div#content {
@@ -10,9 +11,45 @@ div#content {
     width: auto;
 }
 
+body, #wrapper {
+    font-family: "Sakkal Majalla", "B Nazanin", "Lucida Grande",verdana,arial,helvetica,sans-serif;
+    font-size: 16px;
+}
 
+h1, h2, h3, h4 {
+    font-family: "Sakkal Majalla", "B Titr", "Lucida Grande",verdana,arial,helvetica,sans-serif;
+}
+#main-menu {
+    right: 0;
+}
 .journal-link {
     float: right;
+}
+
+table.progress {
+    margin: 1px 6px;
+}
+
+div.issue table img.gravatar {
+    float: right;
+    height: 16px;
+    margin: 0 0 0 0.5em;
+    padding: 1px;
+    width: 16px;
+}
+
+div.issue img.gravatar {
+    float: right;
+    margin: 0 0 0 6px;
+    padding: 2px;
+}
+
+h4 img.gravatar {
+    margin: -8px 0 -8px 4px;
+}
+
+img.gravatar {
+    padding:1px;
 }
 
 /* Message Board */
@@ -91,9 +128,14 @@ table.list.issues {
 	font-size: 14px;
 }
 
-#main-menu ul li a.wiki {
-	font-family: Tahoma;
-	font-size: 12px;
+#main-menu ul {
+    margin-top: 3px;
+    padding-right: 15px;
+}
+
+#main-menu ul li {
+	font-family: 'B Nazanin';
+	font-size: 14px;
 }
 
 .news p .author {
