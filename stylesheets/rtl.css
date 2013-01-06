@@ -19,6 +19,12 @@ body, #wrapper {
 h1, h2, h3, h4 {
     font-family: "Sakkal Majalla", "B Titr", "Lucida Grande",verdana,arial,helvetica,sans-serif;
 }
+
+div.issue div.subject h3 {
+    font-size: 1.5em;
+    margin: -18px 0 0.1em;
+}
+
 #main-menu {
     right: 0;
 }
