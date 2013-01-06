@@ -58,6 +58,11 @@ img.gravatar {
     padding:1px;
 }
 
+td.username img.gravatar {
+    margin: 0 0 0 0.5em;
+    vertical-align: top;
+}
+
 .tabular label {
 	width:90px;
 	
@@ -100,6 +105,12 @@ p.other-formats {
 div.modal p.buttons {
     margin-bottom: 0;
     text-align: left;
+}
+
+
+#admin-menu a.selected {
+    background-position: right 40%;
+    padding-right: 25px !important;
 }
 
 
