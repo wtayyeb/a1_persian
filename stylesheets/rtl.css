@@ -114,6 +114,11 @@ div.modal p.buttons {
 }
 
 
+ul.progressive-project-menu li {
+    float: right !important;
+    margin-right: 10px;
+}
+
 /* Message Board */
 .MessageBoard {
 	direction: rtl;
