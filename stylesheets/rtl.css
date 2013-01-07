@@ -119,6 +119,15 @@ ul.progressive-project-menu li {
     margin-right: 10px;
 }
 
+fieldset#notified_events .parent {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.revision-graph svg {
+    width: 905px;
+    right: 0px;
+}
 /* Message Board */
 .MessageBoard {
 	direction: rtl;
