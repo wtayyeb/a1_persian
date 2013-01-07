@@ -124,10 +124,8 @@ fieldset#notified_events .parent {
     padding-right: 20px;
 }
 
-.revision-graph svg {
-    width: 1000px;
-    right: 0px;
-    display:block;
+.revision-graph {
+	left:300px;
 }
 /* Message Board */
 .MessageBoard {
