@@ -146,8 +146,21 @@ ul.progressive-project-menu li {
 	border: 3px solid black;
 }
 
+tr.entry td.size {
+    text-align: left;
+}
 
+tr span.expander {
+    background-position: center center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
+.icon {
+    background-position: 0% 40%;
+    padding-left: 20px;
+    padding-right: 0;
+}
 /* Text */
 
 .editable {
