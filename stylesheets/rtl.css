@@ -1,7 +1,9 @@
 @import url(../../../stylesheets/rtl.css);
 
+#top-menu { background: #000; padding: 5px 20px 0px 10px;font-size: 0.9em;}
+
 #header > h1 {
-	background: url(../images/logo-2x.png) no-repeat right 20%;
+	background: url(../images/logo-2x.png) no-repeat right center;
 	font-size:24px;
 }
 
@@ -135,6 +137,11 @@ div#main.nosidebar div#content {
 
 #content .tabs ul {
 	width:99%;
+}
+
+select#project_quick_jump_box {
+    margin-right: 5px;
+    margin-left: auto;
 }
 
 /* Message Board */
