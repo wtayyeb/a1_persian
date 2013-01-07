@@ -237,6 +237,7 @@ div#content > div.wiki {
 #main-menu li a:hover {background-color:transparent;color: #000;text-decoration: initial;}
 
 #header {
+    padding-bottom: 30px;
 	padding-left: 10px;
 	background-position-y: 11%;
 }
