@@ -127,6 +127,16 @@ fieldset#notified_events .parent {
 .revision-graph {
 	left:300px;
 }
+
+div#main.nosidebar div#content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#content .tabs ul {
+	width:99%;
+}
+
 /* Message Board */
 .MessageBoard {
 	direction: rtl;
