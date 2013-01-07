@@ -125,8 +125,9 @@ fieldset#notified_events .parent {
 }
 
 .revision-graph svg {
-    width: 905px;
+    width: 1000px;
     right: 0px;
+    display:block;
 }
 /* Message Board */
 .MessageBoard {
