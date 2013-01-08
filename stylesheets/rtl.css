@@ -144,32 +144,29 @@ select#project_quick_jump_box {
     margin-left: auto;
 }
 
-/* Message Board */
-.MessageBoard {
-	direction: rtl;
-	text-align: center;
-
-	background-color: white;
-	color: black;
-	border: 3px solid black;
-
-	font-family: "B Nazanin";
-	font-size: 14px;
-	font-weight: bold;
+div.wiki ul.toc {
+    margin-left: 0;
+    margin-right: 12px;
+    float:left;
 }
 
-.Tasliat {
-	background-color: black;
-	color: red;
-	border: 3px solid red;
+div.wiki ul.toc li {
+    font-size: 16px;
 }
 
-.Tabrik {
-	background-color: green;
-	color: white;
-	font-weight: bold;
-	border: 3px solid black;
+div.wiki ul.toc li li {
+    font-size: 14px;
 }
+
+div.wiki ul.toc a {
+    color: #606060;
+    font-size: inherit;
+}
+
+
+
+
+/* from pre css*/
 
 tr.entry td.size {
     text-align: left;
@@ -218,29 +215,9 @@ table.list.issues {
 	direction: rtl;
 }
 
-/*textarea#content_text.wiki-edit{
-	direction: ltr;
-}*/
-
-.status, .priority, .assigned-to, .fixed-version, .category {
-	font-family: "B Nazanin";
-	font-size: 14px;
-}
-
-.wiki {
-	direction: rtl;
-	font-family: 'B Nazanin';
-	font-size: 14px;
-}
-
 #main-menu ul {
     margin-top: 3px;
     padding-right: 15px;
-}
-
-#main-menu ul li {
-	font-family: 'B Nazanin';
-	font-size: 14px;
 }
 
 .news p .author {
@@ -256,10 +233,6 @@ table.list.issues {
 	direction:rtl;
 }
 
-body {
-	font-family: Tahoma,sans-serif;
-}
-
 .timelog_custom {
 	width: 7%;
 	white-space: pre-line;
@@ -271,7 +244,16 @@ body {
 
 input#issue_subject{
 	direction: rtl;
+	text-align: right;
+}
+
+input#user_login{
+	direction: ltr;
 	text-align: left;
+}
+
+.jstElements {
+    clear: both;
 }
 
 textarea#issue_description, textarea#notes{
@@ -283,5 +265,7 @@ tr.issue.idnt td.subject a {
     padding-right: 16px;
     padding-left: 0;
 }
+
+
 
 

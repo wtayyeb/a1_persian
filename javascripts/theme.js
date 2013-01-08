@@ -424,10 +424,10 @@ function force_notes(){
         var must_have = [
                         ['#notes', 'لطفا توضیح مناسبی را در مورد این به روز رسانی وارد نمایید.'],
 //                        ['#time_entry_comments', 'Enter time comment!'],
-                        ['#issue_estimated_hours', 'لطفا زمان تخمینی را وارد نمایید.'],
-                        ['#issue_due_date', 'لطفا زمان پایان را مشخص نمایید.'],
-                        ['#issue_start_date', 'لطفا زمان آغاز را وارد نمایید.'],
-                        ['#issue_assigned_to_id', 'لطفا مسئول انجام کار را مشخص نمایید.']
+                        ['#issue_estimated_hours', 'لطفا زمان برآورد شده را وارد نمایید.'],
+                        ['#issue_due_date', 'لطفا زمان سر رسید را مشخص نمایید.'],
+                        ['#issue_start_date', 'لطفا تاریخ آغاز را وارد نمایید.'],
+                        ['#issue_assigned_to_id', 'لطفاً کار را به شخص یا گروهی واگذار نمایید.']
         ];
         
         for (i=0; i<must_have.length; i++)
