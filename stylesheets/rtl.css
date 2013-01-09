@@ -173,6 +173,11 @@ div.wiki ul.toc a {
 }
 
 
+.hidden-for-sighted {
+	left: auto;
+    right: -10000px;
+}
+
 
 
 /* from pre css*/
@@ -274,7 +279,3 @@ tr.issue.idnt td.subject a {
     padding-right: 16px;
     padding-left: 0;
 }
-
-
-
-
