@@ -116,7 +116,7 @@ div#content > #add-document > h2 {
 	padding: 12px 20px;
 	margin: -6px -10px 10px;
 	
-	letter-spacing: -1px;
+	letter-spacing: normal;
 	
 /*	border-top: 1px solid #DADEE5;
 	border-bottom: 1px solid #DADEE5;
@@ -645,7 +645,7 @@ table.contacts.index tbody tr.context-menu-selection:hover  {background-color: #
 }
 
 h2 span.tag {
-	letter-spacing: 0px;
+	letter-spacing: normal;
 	top: -4px;
 	position: relative;
 	
@@ -657,7 +657,7 @@ h2 span.tag a {
 
 
 div.filters .live_search {
-	letter-spacing: 0px;
+	letter-spacing: normal;
 }
 
 label#search_overlabel {
