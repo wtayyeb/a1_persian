@@ -474,6 +474,7 @@ function force_notes(){
             alert("مهلت انجام این کار به پایان رسیده است؛ لطفا آن را به روز نمایید.");
             return false;
         }
+        return true;
     });
 
     $('form.tabular').submit(function(){
