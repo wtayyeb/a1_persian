@@ -361,7 +361,7 @@ function try_miladi_to_shamsi(s){
 
 function convert_dates(){
     //Widen Search Areas
-    $('.start-date,.due-date,.due_date,#activity>h3,.spent_on,.created_on,.last_login_on').each(function(){
+    $('.start-date,.due-date,.due_date,.start_date,#activity>h3,.spent_on,.created_on,.last_login_on').each(function(){
         $(this).html(try_miladi_to_shamsi($(this).html()));
 //         $(this).css("font-size", "15px");
     });
