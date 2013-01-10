@@ -422,12 +422,11 @@ function enable_smart_date_fields(){
 function force_notes(){
     $('#issue-form').submit(function(){
         var must_have = [
-                        ['#notes', 'لطفا توضیح مناسبی را در مورد این به روز رسانی وارد نمایید.'],
-//                        ['#time_entry_comments', 'Enter time comment!'],
-                        ['#issue_estimated_hours', 'لطفا زمان برآورد شده را وارد نمایید.'],
-                        ['#issue_due_date', 'لطفا زمان سر رسید را مشخص نمایید.'],
-                        ['#issue_start_date', 'لطفا تاریخ آغاز را وارد نمایید.'],
-                        ['#issue_assigned_to_id', 'لطفاً کار را به شخص یا گروهی واگذار نمایید.']
+                        ['#issue_assigned_to_id'	, 'لطفاً کار را به شخص یا گروهی واگذار نمایید.']
+                        ['#notes'					, 'لطفا توضیح مناسبی را در مورد این به روز رسانی وارد نمایید.'],
+                        ['#issue_due_date'			, 'لطفا زمان سر رسید را مشخص نمایید.'],
+                        ['#issue_start_date'		, 'لطفا تاریخ آغاز را وارد نمایید.'],
+                        ['#issue_estimated_hours'	, 'لطفا زمان برآورد شده را وارد نمایید.'],
         ];
         
         for (i=0; i<must_have.length; i++)
