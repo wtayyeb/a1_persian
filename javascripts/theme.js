@@ -465,7 +465,11 @@ function force_notes(){
         var year = ensure2(currentDate.getFullYear());
         var today = year + '-' + month + '-' + day;
         var done = $('td.progress p.pourcent').html();
-        done = parseInt(done.substr(0, done.length - 1), 10);
+        if (done){
+			done = parseInt(done.substr(0, done.length - 1), 10);
+		}else{
+			done =10;
+		}
         if ((parseInt($('#issue_done_ratio').val()) > done) && ($('#issue_due_date').val() < today) && ($('#issue_status_id').val()!="5") && ($('#issue_status_id').val()!="6" )) {
             alert("مهلت انجام این کار به پایان رسیده است؛ لطفا آن را به روز نمایید.");
             return false;
