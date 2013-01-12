@@ -180,6 +180,11 @@ div.wiki ul.toc a {
 
 
 
+table.issues td.description {
+    text-align: right;
+}
+
+
 /* from pre css*/
 
 tr.entry td.size {
