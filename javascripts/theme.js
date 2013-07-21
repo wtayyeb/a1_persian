@@ -406,7 +406,7 @@ function try_smart_date_convert(s){
 
 
 function enable_smart_date_fields(){
-    target = $('#issue_start_date,#issue_due_date');
+    target = $('#issue_start_date, #issue_due_date');
     target.css('background-color', '#D0DDFF');
     target.attr('title', 'NEW: type something like +2, -3, +1m, -2y or 90/3/29 and press Control to convert date!');
     target.keydown(function(event) {
@@ -422,11 +422,6 @@ function enable_smart_date_fields(){
 function force_notes(){
     $('#issue-form').submit(function(){
         var must_have = [
-                        ['#issue_assigned_to_id'	, 'لطفاً کار را به شخص یا گروهی واگذار نمایید.'],
-                        ['#notes'					, 'لطفا توضیح مناسبی را در مورد این به روز رسانی وارد نمایید.'],
-                        ['#issue_due_date'			, 'لطفا زمان سر رسید را مشخص نمایید.'],
-                        ['#issue_start_date'		, 'لطفا تاریخ آغاز را وارد نمایید.'],
-                        ['#issue_estimated_hours'	, 'لطفا زمان برآورد شده را وارد نمایید.'],
                         ['#fake#', '']
         ];
         
@@ -458,22 +453,22 @@ function force_notes(){
             return false;
         }
 
-        var ensure2 = function(s) { s += ''; if (s.length < 2) s = '0' + s; return s; };
-        var currentDate = new Date()
-        var day = ensure2(currentDate.getDate());
-        var month = ensure2(currentDate.getMonth()+1);
-        var year = ensure2(currentDate.getFullYear());
-        var today = year + '-' + month + '-' + day;
-        var done = $('td.progress p.pourcent').html();
-        if (done){
-			done = parseInt(done.substr(0, done.length - 1), 10);
-		}else{
-			done =10;
-		}
-        if ((parseInt($('#issue_done_ratio').val()) > done) && ($('#issue_due_date').val() < today) && ($('#issue_status_id').val()!="5") && ($('#issue_status_id').val()!="6" )) {
-            alert("مهلت انجام این کار به پایان رسیده است؛ لطفا آن را به روز نمایید.");
-            return false;
-        }
+//         var ensure2 = function(s) { s += ''; if (s.length < 2) s = '0' + s; return s; };
+//         var currentDate = new Date()
+//         var day = ensure2(currentDate.getDate());
+//         var month = ensure2(currentDate.getMonth()+1);
+//         var year = ensure2(currentDate.getFullYear());
+//         var today = year + '-' + month + '-' + day;
+//         var done = $('td.progress p.pourcent').html();
+//         if (done){
+// 			done = parseInt(done.substr(0, done.length - 1), 10);
+// 		}else{
+// 			done =10;
+// 		}
+//         if ((parseInt($('#issue_done_ratio').val()) > done) && ($('#issue_due_date').val() < today) && ($('#issue_status_id').val()!="5") && ($('#issue_status_id').val()!="6" )) {
+//             alert("مهلت انجام این کار به پایان رسیده است؛ لطفا آن را به روز نمایید.");
+//             return false;
+//         }
         return true;
     });
 
