@@ -299,3 +299,7 @@ select#project_quick_jump_box {
     border-radius: 12px;
     margin-left: 5px;
 }
+
+table.list tbody tr.group td {
+	text-align:right;
+}
