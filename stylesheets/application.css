@@ -1,6 +1,14 @@
 @import url(../../../stylesheets/application.css);
 
-/* A1 theme version 1.0.8 by Kirill Bezrukov www.redminecrm.com */
+/* A1 theme version 1.1.2 by Kirill Bezrukov www.redminecrm.com */
+
+/*
+1.1.2
+
+* Contacts 3.2.6 support (tags)
+* Search field styles
+
+*/
 
 #header {
 	background: url(../images/bg-header.png) repeat-x 0px 0px;
@@ -8,8 +16,8 @@
 }
 
 #header > h1 {
-	background: url(../images/logo-2x.png) no-repeat 10px center;
-	padding: 15px 75px;
+	background: url(../images/logo.png) no-repeat 10px 20%;
+	padding: 5px 65px;
 	color: #E0E0E0;
 	text-shadow: 0 -2px rgba(0, 0, 0, 0.2);
 	font-size: 22px;
@@ -25,7 +33,6 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 }
 
-
 h1, h2, h3, h4 {
 	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
 }
@@ -35,8 +42,8 @@ body, #wrapper {
 	background: url(../images/bg-grain.png) repeat 0px 0px #F0F0F0;
 }
 
-#main { background: transparent; margin: 7px 7px 0px 7px; }
-#top-menu { background: #000; padding: 5px 10px 0px 20px;font-size: 0.9em;}
+#main { background: transparent; margin: 15px 15px 0px 15px; }
+#top-menu { background: #000; padding: 7px 10px 2px 20px;}
 
 div.flash {
 	border: 0px solid;
@@ -101,6 +108,8 @@ div#content h2.contacts_header,
 div#content > div.filters h2, 
 div#content > #add-news > h2, 
 div#content > #add-message > h2 , 
+div#content > .message.details > h2 , 
+div#content > .board.details > h2 , 
 div#content > #add-document > h2 {
 	border-top: 1px solid white;
 	border-bottom: 1px solid #AECCD7;
@@ -116,7 +125,7 @@ div#content > #add-document > h2 {
 	padding: 12px 20px;
 	margin: -6px -10px 10px;
 	
-	letter-spacing: normal;
+	letter-spacing: -1px;
 	
 /*	border-top: 1px solid #DADEE5;
 	border-bottom: 1px solid #DADEE5;
@@ -189,8 +198,8 @@ p.subtitle {
 
 div.filters h2 .scope_title a { color: #222; text-decoration: none; } 
 
-h2, .wiki h1 { color: #222; font-size: 22px;}
-h3, .wiki h2 { color: #222; font-size: 19px;}
+h2, .wiki h1 { color: #222; font-size: 26px;}
+h3, .wiki h2 { color: #222; }
 
 
 div#content > div.wiki {
@@ -237,9 +246,11 @@ div#content > div.wiki {
 #main-menu li a:hover {background-color:transparent;color: #000;text-decoration: initial;}
 
 #header {
-    padding-bottom: 30px;
+	padding-bottom: 50px;
+	padding-top: 10px;
 	padding-left: 10px;
 	background-position-y: 11%;
+	min-height: initial;
 }
 
 div#welcome-store-content h1, 
@@ -310,10 +321,10 @@ table.list thead th {
 }
 
 /*Quick search*/
-#quick-search {	margin-top: 15px;}
+#quick-search {	margin-top: 8px;}
 
 /* Grid styles by priorities */
-table.list td {padding: 2px;}
+table.list td {padding: 5px;}
 table.list input[type="checkbox"] {margin-top: 6px;}
 
 table.list tbody tr:hover {background-color: #EFF5F8;}
@@ -364,14 +375,21 @@ input[type="text"], input[type="password"], textarea, select { padding: 2px; bor
 input[type="text"], input[type="password"] { padding: 3px; }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus { border: 1px solid #888866; }
 option { border-bottom: 1px dotted #d7d7d7; }
+input.autocomplete {padding-left: 20px !important; border-radius: 0px; height: inherit;}
 
 /* Forum */
 
+div.message.reply {
+	border-top: 1px solid #DDD;
+	padding-top: 10px;
+}
+
 .controller-messages.action-show .message.reply {
-	padding: 0px 10px;
-	margin: -1px;
 	background: white;
-	border: 1px solid #D9D9D9;
+	padding: 10px 0 0 0;
+	border: none;
+	margin: 0 0 20px 0;
+	border-top: 1px solid #DDD;
 }
 
 .controller-messages.action-show .message {
@@ -385,7 +403,8 @@ option { border-bottom: 1px dotted #d7d7d7; }
 	margin-top: 10px;
 }
 
-.controller-boards p.breadcrumb {
+.controller-boards p.breadcrumb, 
+.controller-messages p.breadcrumb {
 	position: relative;
 	background: white;
 	border: 0px solid;
@@ -448,10 +467,6 @@ img.gravatar {
 
 .wiki img {
 	max-width: 100%;
-}  
-
-.wiki table img {
-	width: 100%;
 }  
 
 div.wiki pre, .wiki pre {
@@ -534,7 +549,7 @@ div.modal h3.title {
 div.modal {
 	border-radius: 8px;
 	border: 1px solid #CCC;
-	padding: 20px 30px;
+	padding: 10px 20px;
 	-webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
 	-moz-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
 	box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
@@ -602,6 +617,33 @@ body.action-login #login-form table {
 	font-weight: bold;
 }
 
+/* Questions */
+
+.controller-messages.action-show .message.details {
+	background: #FAFDFF;
+	padding: 20px;
+	border: inherit;
+}
+
+div#content > .message.details > h2, div#content > .board.details > h2 {
+	margin: -12px -20px 10px;
+}
+
+#topics_list {
+	padding: 0 10px;
+}
+
+#topics_container .topic {
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 30px;
+}
+
+#forum_list,
+.controller-boards.action-index #content > .filters,
+.controller-questions.action-index #content > .filters {
+	padding: 0 15px;
+}
+
 /*Contacts*/
 
 div.filters .live_search {
@@ -644,20 +686,20 @@ table.contacts.index tbody tr.context-menu-selection:hover  {background-color: #
 	padding: 8px;
 }
 
-h2 span.tag {
-	letter-spacing: normal;
+h2 span.tag-label-color {
+	letter-spacing: 0px;
 	top: -4px;
 	position: relative;
 	
 }
 
-h2 span.tag a {
+h2 span.tag-label-color a {
 	margin-bottom: -1px;
 }
 
 
 div.filters .live_search {
-	letter-spacing: normal;
+	letter-spacing: 0px;
 }
 
 label#search_overlabel {
@@ -668,34 +710,41 @@ label#search_overlabel {
 	margin-top: -6px;
 }
 
-span.tag a, span.deal-status {
-	color: white;
+span.tag-label-color {
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	font-size: 9px !important;
 	line-height: 1 !important;
 	margin: 2px 0px 2px 0px;
 	text-decoration: none;
-	font-weight: bold;
 	display: inline-block;
 	position: relative;
 	text-align: center;
 	border-top: 1px solid rgba(255, 255, 255, 0.25);
-	-moz-border-radius: 14px;
-	-webkit-border-radius: 14px;
-	border-radius: 14px;
+	-moz-border-radius: 14px !important;
+	-webkit-border-radius: 14px !important;
+	border-radius: 14px !important;
 	padding: 4px 6px 4px !important;
-	background: black url(../images/dark-overlay.png) repeat-x scroll 0 0;
+	background: url(../images/dark-overlay.png) repeat-x scroll 0 0;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	-webkit-box-shadow: inset 0 1px 0 hsla(0,100%,100%,.3) /*Top*/;
 	-moz-box-shadow: inset 0 1px 0 hsla(0,100%,100%,.3) /*Top*/;
 	box-shadow: inset 0 1px 0 hsla(0,100%,100%,.3) /*Top*/;
 }
 
-span.tag a:hover {
-	text-shadow: none;
+span.tag-label-color {
+	background-color: #96CBFF;
 }
 
-span.deal-status a:hover {
+span.tag-label-color:hover {
+	background-color: #77ADE2;
+}
+
+span.tag-label-color a, span.tag-label-color > span {
+	font-weight: bold !important;
+	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif !important; 
+}
+
+span.tag-label-color:hover a {
 	color: black;
 	text-shadow: none;
 }
@@ -879,9 +928,81 @@ a.buy-button.blue {
 }
 
 
-/*******************/
+/***************************************************/
+/* 		Datetime picker
+/***************************************************/
+
+.ui-datepicker {
+	margin-top: 0;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
+
+	border: 1px solid #CCC;
+	padding: 20px 30px;
+	-webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.95);
+}
+
+.ui-datepicker div.ui-datepicker-header {
+	position: relative;
+}
+
+table.ui-datepicker-calendar td.ui-datepicker-week-col {
+	color: #AAA;
+}
+
+.ui-datepicker td {
+	padding: 2px;
+	border-radius: 3px;
+}
+
+.ui-datepicker .ui-widget-header a {
+	color: #505050;
+}
+
+.ui-datepicker-title { 
+  padding-top: 9px;
+}
+
+.ui-datepicker-prev span, div.ui-datepicker-next span { 
+  margin-top: 0px;
+}
+
+.ui-datepicker-today {
+  background: #FF0000;
+}
+
+.ui-datepicker .ui-state-default {
+	border: 0px;
+}
+
+.ui-datepicker .ui-state-default.ui-state-active {
+	background: #DDD;
+	border-radius: 3px;
+}
+
+.ui-datepicker.ui-widget-content {
+	border: none;
+	background: white;
+	padding: 0 10px;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { top: 10px;}
+
+/***************************************************/
 /* 		jQuery UI			
-/*******************/
+/***************************************************/
+.ui-widget-header .ui-icon {background-image: url(/stylesheets/jquery/images/ui-icons_222222_256x240.png);}
+
+.ui-dialog .ui-dialog-titlebar-close { top: 12px;}
+
 .ui-widget {
 	font-family: inherit;
 	font-size: inherit;
@@ -917,8 +1038,38 @@ a.buy-button.blue {
 	font-size: inherit;
 }
 
-select#project_quick_jump_box {
-    border-radius: 12px;
-    margin-left: 5px;
+.ui-widget-content .ui-state-focus  {
+	border: 1px solid #EEE;
+	background: #EEE;
 }
 
+ul.ui-autocomplete {
+	margin-top: 0;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.95);
+	font-size: 11px;
+}
+
+.ui-autocomplete  .ui-menu .ui-menu-item a {
+	padding: 3px 5px;
+}
+
+/* Search */
+input.autocomplete {
+	border-radius: initial;
+	height: initial;
+}
+
+@media print {
+   #sidebar { display: none; }
+   div#content { width: 100%; }
+}
