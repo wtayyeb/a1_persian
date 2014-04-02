@@ -23,8 +23,8 @@ body, #wrapper {
 
 div#content {
 	margin-right:auto;
-    margin-left: 300px;
     width: auto;
+    margin-left: 300px;
 }
 
 
@@ -37,9 +37,8 @@ div#content {
 	width: 100%;
 }  
 
-h3, .wiki h2, .wiki h1 {
-    padding: 10px 2px 1px 0;
-}
+h2, .wiki h1 { padding: 7px 2px 1px 0; }
+h3, .wiki h2 { padding: 10px 2px 1px 0; }
 
 div.issue div.subject h3 {
     font-size: 1.5em;
