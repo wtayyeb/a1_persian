@@ -206,11 +206,13 @@ tr span.expander {
     padding-right: 8px;
 }
 
+/*
 .icon {
     background-position: 0% 40%;
     padding-left: 20px;
     padding-right: 0;
 }
+*/
 /* Text */
 
 .editable {
@@ -302,3 +304,11 @@ select#project_quick_jump_box {
 table.list tbody tr.group td {
 	text-align:right;
 }
+
+/* Gantt  */
+
+div.gantt_subjects div.project-name,
+div.gantt_subjects div.version-name,
+div.gantt_subjects div.issue-subject { left:  5px !important;}
+
+div#gantt_area { direction:ltr; overflow-y:hidden !important;}
