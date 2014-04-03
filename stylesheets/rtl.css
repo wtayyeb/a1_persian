@@ -48,9 +48,6 @@ div.issue div.subject h3 {
 #main-menu {
     right: 0;
 }
-.journal-link {
-    float: right;
-}
 
 table.progress {
     margin: 1px 6px;
@@ -312,3 +309,16 @@ div.gantt_subjects div.version-name,
 div.gantt_subjects div.issue-subject { left:  5px !important;}
 
 div#gantt_area { direction:ltr; overflow-y:hidden !important;}
+
+/* else */
+#toggle-journal-details-div {float:left !important;}
+
+/* attachments */
+div.attachments > p {clear:right;}
+div.attachments > p > a.icon,
+div.attachments > p > span.size {float:right;padding-left:5px;}
+
+#fancybox-title-float-right {background-position:-40px -90px !important;}
+#fancybox-title-float-left  {background-position:-55px -90px !important;}
+
+div.attachments div.images {display:inline-flex !important;}
