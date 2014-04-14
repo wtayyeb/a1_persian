@@ -54,7 +54,7 @@ table.progress { margin: 1px 6px; width:90% !important;}
 .attributes table.progress {width:80% !important;}
 
 p.percent {
-    margin: 0;
+/*   x-margin: 0; */
     padding: 0;
 }
 
@@ -83,6 +83,11 @@ img.gravatar {
 td.username img.gravatar {
     margin: 0 0 0 0.5em;
     vertical-align: top;
+}
+
+#activity dt img.gravatar {
+    float: right;
+    margin: 0 0 1em 1em;
 }
 
 .tabular label {
@@ -353,4 +358,11 @@ table.list caption {
 
 .tabular label.inline {
     margin-left: auto;
+}
+/* prev and next in activity page */
+div#content > div#activity + div {
+    float: right!important;
+}
+div#content > div#activity + div + div {
+    float: left!important;
 }
