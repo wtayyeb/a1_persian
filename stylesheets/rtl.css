@@ -360,9 +360,9 @@ table.list caption {
     margin-left: auto;
 }
 /* prev and next in activity page */
-div#content > div#activity + div {
+div#content > div#activity ~ div {
     float: right!important;
 }
-div#content > div#activity + div + div {
+div#content > div#activity ~ div + div {
     float: left!important;
 }
