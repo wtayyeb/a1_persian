@@ -366,3 +366,10 @@ div#content > div#activity ~ div {
 div#content > div#activity ~ div + div {
     float: left!important;
 }
+
+/**/
+div.projects h3 {
+    background: url("../images/projects.png") no-repeat scroll 100% 50% rgba(0, 0, 0, 0);
+    padding-right: 20px;
+}
+
