@@ -369,7 +369,7 @@ div#content > div#activity ~ div + div {
 
 /**/
 div.projects h3 {
-    background: url("../images/projects.png") no-repeat scroll 100% 50% rgba(0, 0, 0, 0);
+    background-position:100% 50%;
     padding-right: 20px;
 }
 
