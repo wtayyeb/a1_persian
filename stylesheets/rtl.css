@@ -376,3 +376,8 @@ div.projects h3 {
 #issue_checklist_form > label {
     width: 100%;
 }
+
+select {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 0;
+}
