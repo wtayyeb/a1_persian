@@ -416,3 +416,6 @@ tr.even.priority-6 { background: #ffd4d4; }
 tr.priority-6 a { color: #900; }
 tr.odd.priority-6 td, tr.even.priority-6 td { border-color: #ffb4b4; }
 
+pre {
+	direction:ltr;
+}
